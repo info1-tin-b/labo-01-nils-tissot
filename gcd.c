@@ -12,9 +12,10 @@ int gcd(int a, int b) {
   int k;
   
   while (b != 0) {
-    int r = b;
-    int b = b % a;
-    int a = r;
+    while (b != 0) {
+        int r = a % b;
+        a = b;
+        b = r;
     
   
   }
@@ -29,7 +30,7 @@ int main(int argc, char* argv[]) {
     int a = atoi(argv[1]);
     int b = atoi(argv[2]);
 
-    int result = printf(gcd(a, b));
+    int result = gcd(a, b);
 
     printf("%d\n", result + 5);
 
