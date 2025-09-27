@@ -6,13 +6,16 @@
  */
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
-int gcd(int a, int b) {
+int main gcd(int a, int b) {
   int k;
   while (b != 0) {
-    r = b;
-    b = b % a;
-    a = r;
+    int r = b;
+    int b = b % a;
+    int a = r;
+    int r = 0;
+  
   }
   return a;
 }
@@ -20,14 +23,14 @@ int gcd(int a, int b) {
 int main(int argc, char* argv[]) {
     if (argc <= 2) {
         return -1;
-    }
+      }
 
     int a = atoi(argv[1]);
     int b = atoi(argv[2]);
 
-    int result = gcd(a, b);
+    result = printf(gcd(a, b));
 
     printf("%d\n", result + 5);
 
-    return 0
+    return 0;
 }
